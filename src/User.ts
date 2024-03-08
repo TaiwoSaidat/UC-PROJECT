@@ -7,6 +7,7 @@ export class User {
         lat: number
         lng: number
     }
+    
     constructor(){
         this.name = faker.name.firstName()
         this.location = {
@@ -14,4 +15,8 @@ export class User {
             lng: parseFloat(faker.address.longitude())
         }
     }
+    markerContent(): string {
+        return `${this.name} is a randomly generated user by our app`
+    }
+
 }
